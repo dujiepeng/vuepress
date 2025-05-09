@@ -116,13 +116,13 @@ export default {
 <style scoped>
 .feedback-button-container {
   position: fixed;
-  right: 20px;
+  right: 20px; /* 按钮贴在右侧，距离边缘20px */
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); /* 保持垂直居中 */
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .feedback-button {
@@ -142,13 +142,17 @@ export default {
 }
 
 .feedback-form {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-top: 10px;
   width: 300px;
   border: 1px solid #eaecef;
+  z-index: 2000;
 }
 
 .feedback-form h3 {
